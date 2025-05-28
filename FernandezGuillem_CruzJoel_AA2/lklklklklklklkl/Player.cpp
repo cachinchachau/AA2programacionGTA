@@ -6,28 +6,28 @@ void Player::movePosition(Input input, Cell** map)
     switch (input)
     {
     case Input::UP:
-        if (!(map[playerPos.x][playerPos.y - 1] == Cell::PARED || map[playerPos.x][playerPos.y - 1] == Cell::PEATON))
+        if (!(map[playerPos.x][playerPos.y - 1] == Cell::PARED || map[playerPos.x][playerPos.y - 1] == Cell::PEATON || map[playerPos.x][playerPos.y - 1] == Cell::COCHE))
         {
             playerPos.y--;
         }
         playerDir = Direction::UP;
         break;
     case Input::DOWN:
-        if (!(map[playerPos.x][playerPos.y + 1] == Cell::PARED || map[playerPos.x][playerPos.y + 1] == Cell::PEATON))
+        if (!(map[playerPos.x][playerPos.y + 1] == Cell::PARED || map[playerPos.x][playerPos.y + 1] == Cell::PEATON || map[playerPos.x][playerPos.y + 1] == Cell::COCHE))
         {
             playerPos.y++;
         }
         playerDir = Direction::DOWN;
         break;
     case Input::LEFT:
-        if (!(map[playerPos.x - 1][playerPos.y] == Cell::PARED || map[playerPos.x - 1][playerPos.y] == Cell::PEATON))
+        if (!(map[playerPos.x - 1][playerPos.y] == Cell::PARED || map[playerPos.x - 1][playerPos.y] == Cell::PEATON || map[playerPos.x - 1][playerPos.y] == Cell::COCHE))
         {
             playerPos.x--;
         }
         playerDir = Direction::LEFT;
         break;
     case Input::RIGHT:
-        if (!(map[playerPos.x + 1][playerPos.y] == Cell::PARED || map[playerPos.x + 1][playerPos.y] == Cell::PEATON))
+        if (!(map[playerPos.x + 1][playerPos.y] == Cell::PARED || map[playerPos.x + 1][playerPos.y] == Cell::PEATON || map[playerPos.x + 1][playerPos.y] == Cell::COCHE))
         {
             playerPos.x++;
         }
@@ -111,7 +111,7 @@ void Player::atack(Cell** map, Peaton* peatones, int numPeatones)
         {
             if (peatones[i].peatonPos.x == posX && peatones[i].peatonPos.y == posY)
             {
-                peatones[i].setHp(peatones[i].getHp() - 1);
+                peatones[i].setHp(peatones[i].getHp() - pow);
                 if (peatones[i].getHp() == 0)
                 {
                     peatones[i].die(map);

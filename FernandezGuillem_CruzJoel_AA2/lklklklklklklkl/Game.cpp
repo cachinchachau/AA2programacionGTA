@@ -39,6 +39,8 @@ int main()
 
     int numPeatones;
 
+    int numCars = 0;
+
     bool cont = true;
 
     Input input = Input::NONE;
@@ -52,8 +54,9 @@ int main()
     if (config.is_open())
     {
 
-        while (config >> mapX >> mapY >> playerHP >> playerPow >> peaje1 >> peaje2 >> numPeatonesLS >> maxDinerosLS >> peatones1Hp >> peatones1Pow >> numPeatonesSF >> maxDinerosSF >> peatones2Hp >> peatones2Pow >> 
-            numPeatonesLV >> maxDinerosLV >> peatones3Hp >> peatones3Pow) {}
+        while (config >> mapX >> mapY >> playerHP >> playerPow >> peaje1 >> peaje2 >> numPeatonesLS >> maxDinerosLS >> peatones1Hp >> peatones1Pow >> numPeatonesSF >> maxDinerosSF >> peatones2Hp >> peatones2Pow >>
+            numPeatonesLV >> maxDinerosLV >> peatones3Hp >> peatones3Pow >> numCars) {
+        }
 
     }
     config.close();
@@ -61,7 +64,8 @@ int main()
     cj.setHp(playerHP);
     cj.setPow(playerPow);
 
-    Map map(mapX, mapY);
+    Map map(mapX, mapY, numCars);
+
     numPeatones = numPeatonesLS + numPeatonesSF;
 
     Peaton* peatones = new Peaton[numPeatones];
@@ -135,6 +139,7 @@ int main()
         map.printMap(cj);
 
         std::cout << '\n' << "                                   DINEROS: " << cj.getDineros() << std::endl;
+        std::cout << "numCars: " << numCars << std::endl;
 
         //FRAMECONTROL 
         Sleep(500);

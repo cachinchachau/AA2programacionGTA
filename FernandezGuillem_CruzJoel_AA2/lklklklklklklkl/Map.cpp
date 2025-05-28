@@ -2,12 +2,14 @@
 #include "Globals.h"
 #include "Player.h"
 
-Map::Map(int w, int h)
+Map::Map(int w, int h, int cars)
 {
     map = new Cell * [mapX];
     for (int i = 0; i < mapX; ++i) {
         map[i] = new Cell[mapY];
     }
+
+    numCars = cars;
 }
 
 Map::~Map() 
@@ -61,6 +63,24 @@ void Map::initMap(Player player)
     Position pos = player.getPosition();  
     map[pos.x][pos.y] = Cell::CJ;  
 
+    for (int i = 0; i < numCars; i++)
+    {
+        bool cont = true;
+
+        while (cont)
+        {
+            int randX = randNum(2, mapX - 2);
+            int randY = randNum(2, mapY - 2);
+
+            if (map[randX][randY] == Cell::VACIO)
+            {
+                map[randX][randY] = Cell::COCHE;
+                cont = false;
+            }
+
+        }
+    }
+
 }
 
 void Map::printMap(Player player)
@@ -97,6 +117,9 @@ void Map::printMap(Player player)
                 break;
             case Cell::DINERO:
                 std::cout << "$ ";
+                break;
+            case Cell::COCHE:
+                std::cout << "C ";
                 break;
             default:
                 std::cout << "  ";
