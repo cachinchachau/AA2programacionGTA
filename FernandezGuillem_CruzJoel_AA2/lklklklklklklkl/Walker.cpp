@@ -3,8 +3,18 @@
 
 void Peaton::initPeaton(City city, int newHp, int newPow)
 {
-	peatonCity = city;
+    int randType = randNum(1, 2);
+    if (randType == 1)
+    {
+        type = PeatonType::NEUTRAL;
+    }
+    else
+    {
+        type = PeatonType::AGRESIVE;
+    }
+    peatonCity = city;
     hp = newHp;
+    maxHp = hp;
     pow = newPow;
 }
 
@@ -58,10 +68,15 @@ bool Peaton::isCloseToPlayer(Cell** map)
     return false;
 }
 
-void Peaton::move(Cell** map)
+void Peaton::move(Cell** map, Player& player)
 {
     if (isCloseToPlayer(map))
-        return;
+    {
+        if (type == PeatonType::AGRESIVE && hp < maxHp)
+        {
+            player.setHp(player.getHp() - pow);
+        }
+    }
 
     int dir = randNum(1, 4);
 

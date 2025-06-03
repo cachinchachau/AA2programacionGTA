@@ -1,3 +1,31 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: El directorio intermedio (x64\Debug\) contiene archivos compartidos de otro proyecto (lklklklklklklkl.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  Game.cpp
+  Map.cpp
+C:\Users\Guillem\Documents\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Player.h(28,28): error C2061: error de sintaxis: identificador 'Peaton'
+  (compilando archivo de origen "Game.cpp")
+  
+C:\Users\Guillem\Documents\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Game.cpp(12,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+C:\Users\Guillem\Documents\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Game.cpp(110,16): error C2660: 'Player::atack': la función no acepta 3 argumentos
+      C:\Users\Guillem\Documents\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Player.h(28,10):
+      vea la declaración de 'Player::atack'
+      C:\Users\Guillem\Documents\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Game.cpp(110,16):
+      al hacer coincidir la lista de argumentos '(Cell **, Peaton *, int)'
+  
+C:\Users\Guillem\Documents\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Game.cpp(125,25): error C2660: 'Peaton::move': la función no acepta 1 argumentos
+      C:\Users\Guillem\Documents\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Walker.h(23,7):
+      vea la declaración de 'Peaton::move'
+      C:\Users\Guillem\Documents\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Game.cpp(125,25):
+      al hacer coincidir la lista de argumentos '(Cell **)'
+  
+C:\Users\Guillem\Documents\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Walker.h(23,24): error C2061: error de sintaxis: identificador 'Player'
+  (compilando archivo de origen "Map.cpp")
+  
   Player.cpp
-  lklklklklklklkl.vcxproj -> C:\prog_gameboardA02\FernandezGuillem_CruzJoel_AA2\x64\Debug\FernandezGuillem_CruzJoel_AA2.exe
+C:\Users\Guillem\Documents\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Walker.h(23,24): error C2061: error de sintaxis: identificador 'Player'
+  (compilando archivo de origen "Player.cpp")
+  
+  Walker.cpp
+C:\Users\Guillem\Documents\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Player.h(28,28): error C2061: error de sintaxis: identificador 'Peaton'
+  (compilando archivo de origen "Walker.cpp")
+  
+  Generando código...

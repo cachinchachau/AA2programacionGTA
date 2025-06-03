@@ -1,12 +1,15 @@
 #pragma once
 #include "Globals.h"
+#include "Player.h"
 
+enum class PeatonType { AGRESIVE, NEUTRAL };
 
 class Peaton
 {
-
+	PeatonType type;
 	int pow;
 	int hp;
+	int maxHp;
 
 public:
 
@@ -17,7 +20,7 @@ public:
 	void spawn(Cell** map);
 	void die(Cell** map);
 	bool isCloseToPlayer(Cell** map);
-	void move(Cell** map);
+	void move(Cell** map, Player& player);
 
 	void setPow(int newPow) { pow = newPow; }
 	int getPow() { return pow; }
