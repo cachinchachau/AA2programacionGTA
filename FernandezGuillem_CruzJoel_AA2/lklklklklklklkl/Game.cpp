@@ -115,7 +115,10 @@ int main()
         }
         else if (GetAsyncKeyState(VK_ESCAPE))
         {
-            cont = false;
+            /*cont = false;*/
+
+
+
         }
         else
         {

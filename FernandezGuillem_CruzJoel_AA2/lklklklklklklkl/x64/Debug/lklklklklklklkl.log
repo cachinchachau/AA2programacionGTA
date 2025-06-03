@@ -1,3 +1,4 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: El directorio intermedio (x64\Debug\) contiene archivos compartidos de otro proyecto (lklklklklklklkl.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
-  Player.cpp
+  Game.cpp
+C:\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\lklklklklklklkl\Game.cpp(12,15): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   lklklklklklklkl.vcxproj -> C:\AA2programacionGTA\FernandezGuillem_CruzJoel_AA2\x64\Debug\FernandezGuillem_CruzJoel_AA2.exe
